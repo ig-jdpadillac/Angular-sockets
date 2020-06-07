@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsocketService } from './services/websocket.service';
-import { ChatService } from './services/chat.service';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +11,8 @@ export class AppComponent implements OnInit  {
 
   constructor(
     public wbsocketSrv: WebsocketService,
-    public chatSrv: ChatService
-  ) {
-
-  }
+  ) {}
 
   ngOnInit() {
-    this.chatSrv.sendMessage('Hola y bienvendio');
   }
 }
