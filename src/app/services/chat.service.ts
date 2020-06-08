@@ -12,7 +12,7 @@ export class ChatService {
   ) { }
 
   public sendMessage(payload: {de: string, body: string}) {
-    this.wsSrv.emit('message', payload);
+    this.wsSrv.emit('message', payload, null);
   }
 
   public getMessages(): Observable<any> {
