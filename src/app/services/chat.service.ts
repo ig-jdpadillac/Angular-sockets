@@ -19,4 +19,8 @@ export class ChatService {
     return this.wsSrv.listenServerEvetns('newMessage');
   }
 
+  public getPrivateMessages(): Observable<any> {
+    return this.wsSrv.listenServerEvetns('privateMessage');
+  }
+
 }
